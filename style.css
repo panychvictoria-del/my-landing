@@ -1,0 +1,108 @@
+:root {
+    --white: #FFFFFF;
+    --black: #131313;
+    --background-black: #000307;
+    --dark-brown: #120603;
+    --red: #B03415;
+    --brown: #1E0B06;
+    --light-brown: #702715;
+    --font-main: "Inter", sans-serif;
+    --font-title: "Orbitron", sans-serif;
+}
+
+body {
+  background-color: var(--brown);
+
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px ;
+    background-color: var(--black);
+}
+
+a {
+    padding: 15px;
+    font-size: 25px;
+    color: var(--white);
+    font-family: var(--font-main) ;
+    text-decoration: none;
+}
+
+header img{
+    width: 174px ;
+    height: 24px ;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 50px;
+}
+.content {
+    padding-left: 50px;
+    padding-top: 130px;
+}
+.title-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.line {
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    background-color: #FFFFFF;
+}
+
+.title {
+    width: 545px;
+    height: 74px;
+    
+}
+
+.image {
+    margin-left: auto;
+}
+
+.planet {
+    width: 685px;
+    height: 551px;
+}
+
+.title-text {
+    font-family: var(--font-main);
+    color: var(--white);
+    font-size: 30px;
+    font-weight: 300;
+    margin: auto;
+    padding: 43px 0px;
+}
+
+.hero-btn {
+    font-family: var(--font-main);
+    font-size: 30px;
+    padding: 20px 15px;
+    border-radius: 30px;
+    width: 330px;
+    height: 78px;
+    margin-top: 55px;
+    background-color: var(--background-black);
+    color: var(--white);
+}
+
+.hero-btn:hover {
+    background: var(--light-brown);
+    border-color: var(--brown);
+    box-shadow: 0 0 50px rgba(176, 52, 21, 0.73);
+    transition: 0.5s ease-in-out;
+    transform: translateY(-5px);
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: var(--red);
+}
