@@ -1,9 +1,17 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 :root {
     --white: #FFFFFF;
     --black: #131313;
     --background-black: #000307;
     --dark-brown: #120603;
     --red: #B03415;
+    --light-red:#a3371c;
     --brown: #1E0B06;
     --light-brown: #702715;
     --font-main: "Inter", sans-serif;
@@ -11,20 +19,27 @@
 }
 
 body {
-  background-color: var(--brown);
+  background-color: var(--background-black);
 
 }
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px ;
+    gap: 20px;
+    padding: 20px 30px;
     background-color: var(--black);
 }
 
 a {
-    padding: 15px;
-    font-size: 25px;
+    padding: 10px;
+    font-size: 18px;
     color: var(--white);
     font-family: var(--font-main) ;
     text-decoration: none;
@@ -37,13 +52,16 @@ header img{
 
 .hero-section {
     display: flex;
-    justify-content: center;
-    gap: 50px;
-    padding-top: 50px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 50px 0px 0px 30px;
 }
+
 .content {
-    padding-left: 50px;
-    padding-top: 130px;
+   padding: 0;
 }
 .title-text {
     display: flex;
@@ -59,18 +77,20 @@ header img{
 }
 
 .title {
-    width: 545px;
-    height: 74px;
+    width: 100%;
+    max-width: 545px;
+    height: auto;
     
 }
 
 .image {
-    margin-left: auto;
+    width: 50%;
 }
 
 .planet {
-    width: 685px;
-    height: 551px;
+    width: 100%;
+    max-width: 685px;
+    height: auto;
 }
 
 .title-text {
@@ -92,17 +112,330 @@ header img{
     margin-top: 55px;
     background-color: var(--background-black);
     color: var(--white);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
 }
 
 .hero-btn:hover {
     background: var(--light-brown);
     border-color: var(--brown);
     box-shadow: 0 0 50px rgba(176, 52, 21, 0.73);
-    transition: 0.5s ease-in-out;
     transform: translateY(-5px);
-    cursor: pointer;
 }
 
 nav a:hover {
     color: var(--red);
 }
+
+
+.benefit-title {
+    font-family: var(--font-title);
+    font-size: 50px;
+    color: var(--white);
+    font-weight: 50;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 200px 0px 36px 0px;
+}
+
+.benefit-first-subtitle {
+    color: var(--white);
+    font-family: var(--font-main);
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+    margin: 0px 0px 60px;
+}
+
+.card-benefit {
+    background: linear-gradient(145deg, #1b1412, #0c0c0c);
+    padding: 30px 20px;
+    width: 100%;
+    height: 180px;
+    border-radius: 20px;
+    border: solid 2px var(--light-brown);
+    align-items: center;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.benefit-second-subtitle {
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    gap: 30px;
+}
+
+.number {
+    font-family: var(--font-title);
+    font-size: 50px;
+    font-weight: 200;
+    margin: 0;
+    color: var(--red);
+}
+
+.benefits-second-title {
+    font-size: 30px;
+    font-family: var(--font-main);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0;
+}
+
+.benefit-description {
+    padding-top: 20px;
+}
+
+.description {
+    color: var(--white);
+    font-size: 25px;
+    margin: 0;
+    font-family: var(--font-main);
+    font-weight: 300;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    gap: 30px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+}
+
+.cards-prices{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    gap: 30px;
+    margin: auto;
+}
+
+.tariffs-title{
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    font-family: var(--font-title);
+    font-size: 50px;
+    margin: 200px 0px 20px ;
+    font-weight: 400;
+}
+.card-price {
+    background-color: var(--dark-brown);
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: -5px -5px 40px rgba(232, 96, 4, 0.4);
+    border: 1px solid var(--red);
+    transition: transform 0.4s ease;
+}
+
+.price-image {
+    display: flex;
+    justify-content: center;
+}
+
+.image-card {
+    width: 100%;
+    height: 223px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.price-title {
+    font-family: var(--font-title);
+    color: var(--white);
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 100;
+    text-align: center;
+    padding: 36px 0px 36px;
+    margin: auto;
+}
+
+.price-description {
+    color: var(--white);
+    font-family: var(--font-main);
+    font-size: 20px;
+    font-weight: 300;
+    margin: auto;
+}
+
+.price {
+    color: var(--light-red);
+    font-family: var(--font-title);
+    font-size: 30px;
+    margin: auto;
+    padding: 30px 0px 30px 0px;
+}
+
+.price-btn {
+    color: var(--white);
+    background-color: var(--brown);
+    border: 1px solid var(--light-brown);
+    border-radius: 30px;
+    font-size: 25px;
+    font-family: var(--font-main);
+    padding: 20px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    transition: 0.3s ease;
+    
+}
+
+.second-line {
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(145deg, #f83802, #0c0c0c);
+}
+
+.price-btn:hover {
+    background-color: #48170b81;
+    font-size: 20px;
+}
+
+.arrow {
+    font-size: 30px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.price-btn:hover .arrow {
+    transform: rotate(46deg);
+    font-size: 25px;
+}
+
+.card-price:hover {
+    box-shadow: -5px -5px 40px rgba(150, 64, 6, 0.4);
+    transform: scale(0.9);
+}
+
+.reviews h2 {
+    font-family: var(--font-main);
+    font-size: 50px;
+    color: var(--white);
+    font-weight: 400;
+    text-align: center;
+    padding: 200px 0 20px;
+}
+
+.reviews-subtitle {
+    color: var(--white);
+    font-family: var(--font-main);
+    font-size: 30px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.container-review {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 30px auto 0;
+    box-sizing: border-box;
+}
+
+.review {
+    font-family: var(--font-main);
+    color: var(--white);
+    background-color: var(--dark-brown);
+    border-radius: 20px;
+    border: 1px solid var(--light-red);
+    padding: 30px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-text {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.name {
+    font-size: 18px;
+    margin: 20px 0 5px;
+}
+
+.stars {
+    color: var(--red);
+    font-size: 25px;
+    letter-spacing: 3px;
+}
+
+.right-content {
+    text-align: right;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px 20px 10px 20px;
+    margin-top: 200px;
+    width: 100%;
+    background-color: var(--black);
+}
+
+.footer-text img {
+    width: 180px;
+}
+
+.footer-text p {
+    color: var(--white);
+    font-size: 18px;
+    font-family: var(--font-main);
+    margin-top: 10px;
+}
+
+.footer-navigation{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-navigation h3 {
+    color: var(--white);
+    font-family: var(--font-main);
+    font-size: 20px;
+}
+
+.footer-navigation a {
+ padding: 10px 0 0 0;
+} 
+
+.contact h2 {
+    color: var(--white);
+    font-family: var(--font-main);
+    font-size: 20px;
+}
+
+.contact p {
+    color: var(--white);
+    font-family: var(--font-main);
+    font-size: 20px;
+    padding: 10px 0 0 0;
+}
+
+.safe {
+    color: var(--white);
+    font-family: var(--font-main);
+    font-size: 15px;
+    font-weight: 100;
+    padding: 10px ;
+    text-align: right;
+    background-color: var(--black);
+}
+
