@@ -35,6 +35,8 @@ body {
     gap: 20px;
     padding: 20px 30px;
     background-color: var(--black);
+    position: fixed;
+    width: 100%;
 }
 
 a {
@@ -57,11 +59,11 @@ header img{
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 50px 0px 0px 30px;
+    padding: 60px 0px 0px 30px;
 }
 
 .content {
-   padding: 0;
+   padding-top: 100px;
 }
 .title-text {
     display: flex;
@@ -198,6 +200,90 @@ nav a:hover {
     margin: 0;
     font-family: var(--font-main);
     font-weight: 300;
+}
+
+.spaceship {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 0px 50px 0px 50px;
+    color: var(--white);
+    margin-top: 200px;
+}
+
+.spaceship-image {
+    width: 70%;
+}
+
+.spaceship-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.spaceship-content {
+    width: 40%;
+    border: 1px solid var(--light-red);
+    padding: 40px 30px;
+    text-align: left;
+    border-radius: 20px;
+    box-shadow: -5px -5px 40px rgba(255, 107, 1, 0.764);
+    background-color: var(--black);
+}
+
+.spaceship-content span{
+    color: var(--red);
+}
+.spaceship-content h2 {
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 25px;
+    font-family: var(--font-title);
+}
+
+.spaceship-description {
+    color: var(--white);
+    font-size: 15px;
+    margin-bottom: 35px;
+    font-family: var(--font-main);
+    font-weight: 300;
+}
+.small-image {
+    width: 300px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.small-image:hover {
+    transform: scale(0.9);
+}
+
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
 }
 
 .cards {
@@ -438,4 +524,6 @@ nav a:hover {
     text-align: right;
     background-color: var(--black);
 }
+
+
 
