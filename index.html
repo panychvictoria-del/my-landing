@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,38 +9,44 @@
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Rammetto+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>RedPath</title>
 </head>
 <body>
     <header>
     <div class="header">
-        <img src="./images/RedPath.png" alt="logo" class="logo">
-        <nav>
+        <img src="./images/лого хедер.png" alt="logo" class="logo">
+        <nav class="nav-menu" id="navMenu">
             <a href="#hero">Головна</a>
             <a href="#benefits">Про подорож</a>
             <a href="#prices">Ціна</a>
             <a href="#review">Відгуки</a>
             <a href="#contact">Контакти</a>
         </nav>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
 </header>
+<main>
    <section class="hero" id="hero">
         <div class="hero-section">
         <div class="content">
-        <img src="/images/RedPath (1).png" alt="logo" class="title">
+        <img src="./images/лого.png" alt="logo" class="title ">
        <p class="title-text"> <span class="line"></span>
         твоя подорож на Марс 
        </p>
-        <button class="hero-btn">Забронювати політ</button>
+        <button class="hero-btn" id="openModal">Забронювати політ</button>
     </div>
     <div class="image">
-        <img src="/images/image 6.png" alt="image" class="planet">
+        <img src="./images/фото марса.png" alt="image" class="planet">
     </div>
     </div>
        </section>
     <section class="benefits" id="benefits">
-    <h1 class="benefit-title">ЧОМУ REDPATH?</h1>
+    <h1 class="benefit-title" >ЧОМУ REDPATH?</h1>
     <p class="benefit-first-subtitle">
     Ми створюємо подорожі, які виходять за межі звичайного туризму
     </p>
@@ -52,7 +58,7 @@
         </div>
         <div class="benefit-description">
             <p class="description">
-                Побач Марс на власні очі та отримай <br>
+                Побач Марс на власні очі та отримай 
                 досвід, якого не знайдеш на Землі.
             </p>
         </div>
@@ -64,7 +70,7 @@
         </div>
         <div class="benefit-description">
             <p class="description">
-                Космічний корабель створений для <br>
+                Космічний корабель створений для 
                 комфортної та безпечної подорожі.
             </p>
         </div>
@@ -76,7 +82,7 @@
         </div>
         <div class="benefit-description">
             <p class="description">
-               Досвідчені фахівці супроводжуватимуть <br> 
+               Досвідчені фахівці супроводжуватимуть 
                тебе протягом усієї подорожі.
             </p>
         </div>
@@ -88,7 +94,7 @@
         </div>
         <div class="benefit-description">
             <p class="description">
-               Досліджуй Марс та відкривай <br> для себе щось нове.
+               Досліджуй Марс та відкривай для себе щось нове.
             </p>
         </div>
     </div>
@@ -97,29 +103,35 @@
 <section class="spaceship">
     <div class="spaceship-image">
         <img
-    src="./images/944ddc41-f5f0-4785-a48f-beeba3d9362b.png"
-    alt="Космічний корабель"
-    class="small-image"
-    onclick="openImage()">
-<div class="image-modal" id="imageModal" onclick="closeImage()">
-    <span class="close-button">×</span>
-    <img src="./images/944ddc41-f5f0-4785-a48f-beeba3d9362b.png" alt="Космічний корабель">
-</div>
+            src="./images/фото корабля компютер.png"
+            alt="Космічний корабель"
+            class="small-image"
+            id="desktopImage">
+        <img
+            src="./images/фото корабля телефон.png"
+            alt="Космічний корабель"
+            class="mobile-image"
+            id="mobileImage">
     </div>
     <div class="spaceship-content">
         <h2>ТВІЙ ШЛЯХ ДО <span>МАРСА</span></h2>
+
         <p class="spaceship-description">
             Корабель REDPATH — концепція подорожі за межі Землі,
             де сучасні технології відкривають шлях до нових світів.
         </p>
     </div>
 </section>
+<div class="image-modal" id="imageModal">
+    <span class="close-button" id="closeImageButton">×</span>
+    <img id="modalImage" src="" alt="Космічний корабель">
+</div>
 <section class="tariffs" id="prices">
         <h2 class="tariffs-title">Оберіть свою місію</h2>
     <div class="cards-prices">
         <div class="card-price">
            <div class="price-image">
-             <img src="./images/корабель.png" alt="image" class="image-card">
+             <img src="./images/фото картки1.png" alt="image" class="image-card">
            </div>
             <h3 class="price-title">MARS EXPLORER</h3>
             <p class="price-description">7 місяців подорожі <br>Дослідження поверхні Марса</p><span class="second-line"></span>
@@ -175,10 +187,11 @@
         </div>
     </div>
 </section>
+</main>
 <footer class="footer" id="contact">
     <div class="footer-content">
     <div class="footer-text">
-        <img src="/images/RedPath (1).png" alt="logo" class="logo-footer">
+        <img src="./images/лого.png" alt="logo" class="logo-footer">
        <p> Твоя подорож на Марс</p>
     </div>
          <nav class="footer-navigation">
@@ -199,6 +212,32 @@
             <p>© 2026 REDPATH. Усі права захищені.</p>
         </div>
 </footer>
-<script src="/script.js"></script>
+<div class="booking-modal" id="bookingModal">
+    <div class="booking-form">
+        <button class="close-modal" id="closeModal" type="button">×</button>
+        <h2 id="bookingTitle">ЗАБРОНЮВАТИ ПОЛІТ</h2>
+        <form id="bookingForm">
+            <label for="name">Твоє ім'я</label>
+            <input type="text" id="name" required placeholder="Введи своє ім'я">
+            <small id="nameError"></small>
+            <label for="phone">Номер телефону</label>
+            <input type="tel" id="phone" required placeholder="+380 00 000 00 00">
+            <small id="phoneError"></small>
+            <label for="tariff">Обери тариф</label>
+            <select id="tariff" required>
+                <option value="">Обери тариф</option>
+                <option value="MARS EXPLORER">MARS EXPLORER — $250 000</option>
+                <option value="MARS PREMIUM">MARS PREMIUM — $450 000</option>
+                <option value="MARS EXPEDITION">MARS EXPEDITION — $700 000</option>
+            </select>
+            <small id="tariffError"></small>
+            <button type="submit" class="booking-submit">
+                Надіслати заявку
+            </button>
+            <p id="formMessage"></p>
+        </form>
+    </div>
+</div>
+<script src="js/script.js"></script>
 </body>
 </html>
