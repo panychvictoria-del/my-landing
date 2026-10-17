@@ -35,6 +35,7 @@ function openMenu() {
 const bookingModal = document.getElementById("bookingModal");
 const bookingForm = document.getElementById("bookingForm");
 const bookingTitle = document.getElementById("bookingTitle");
+const message = document.getElementById("formMessage");
 
 document.querySelectorAll(".hero-btn, .price-btn").forEach(button => {
     button.onclick = function() {
@@ -61,7 +62,6 @@ bookingForm.onsubmit = function(event) {
     const name = document.getElementById("name");
     const phone = document.getElementById("phone");
     const tariff = document.getElementById("tariff");
-    const message = document.getElementById("formMessage");
     const nameValue = name.value.trim();
     const phoneValue = phone.value.replace(/\D/g, "");
 
